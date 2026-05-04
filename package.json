@@ -2,6 +2,11 @@
   "name": "inventory-app",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "ajv": "6.12.6",
+    "ajv-keywords": "3.5.2",
+    "ajv-formats": "1.6.1"
+  },
   "dependencies": {
     "@apollo/client": "3.8.10",
     "@react-aria/ssr": "3.10.0",
@@ -73,6 +78,6 @@
     "typescript": "4.9.5"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "16.x"
   }
 }

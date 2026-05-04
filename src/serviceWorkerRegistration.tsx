@@ -1,5 +1,8 @@
+const API_URL = process.env.REACT_APP_API_URL;
+
+
 const isLocalhost = Boolean(
-	window.location.hostname === 'localhost' ||
+	window.location.hostname === 'localhost' || API_URL ||
 	window.location.hostname === '[::1]' ||
 	window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
 );

@@ -1,4 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+const API_URL = process.env.REACT_APP_API_URL;
+
+
 
 interface User {
 	id: number;
@@ -46,7 +49,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 	}, []);
 
 	const login = async (username: string, password: string) => {
-		const response = await fetch('http://localhost:4000/login', {
+		const response = await fetch(`${API_URL}/login`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ username, password })

@@ -1,4 +1,7 @@
 import { io, Socket } from 'socket.io-client';
+const API_URL = process.env.REACT_APP_API_URL;
+
+
 
 class SocketService {
   private socket: Socket | null = null;
@@ -7,7 +10,7 @@ class SocketService {
   connect() {
     if (this.socket?.connected) return;
 
-    this.socket = io('http://localhost:4000');
+    this.socket = io(API_URL);
 
     this.socket.on('connect', () => {
       console.log('✅ Real WebSocket connected');
@@ -38,7 +41,7 @@ class SocketService {
   }
 
   getCurrentSessionCount(): Promise<number> {
-    return fetch('http://localhost:4000/health')
+    return fetch(`${API_URL}/health`)
         .then(res => res.json())
         .then(data => data.activeSessions)
         .catch(() => 0);
