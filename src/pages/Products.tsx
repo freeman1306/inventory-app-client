@@ -1,4 +1,4 @@
-﻿import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_PRODUCTS } from '../graphql/queries';
 import ProductCard from '../components/ProductCard';
