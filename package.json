@@ -13,7 +13,7 @@
     "chart.js": "4.4.1",
     "cra-template-redux": "2.0.0",
     "graphql": "16.8.1",
-    "i18next": "^25.2.0",
+    "i18next": "25.2.0",
     "jsonwebtoken": "^9.0.3",
     "react": "18.2.0",
     "react-bootstrap": "2.10.10",
